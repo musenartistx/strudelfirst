@@ -1,0 +1,28 @@
+
+_$:s("gm_gunshot [gm_picolo steinway gm_orchestra_hit:5]")
+  .n(irand(5))
+  .pan(sine.range(0,1))
+  ._punchcard()
+
+_$: s("akaimpc60 gm_clavinet:9 gm_pad_metalic:5")
+.squiz(irand)
+.every(8, speed)
+.mask("5 6", s ("gm_contrabass"))
+
+_$:s("and(3,3) ocarina_small_stacc(3,8)")
+  .gain(0.5)
+  .n(irand(4))
+  .delay(cosine.range(0.1,0.5))
+  .jux(rev)
+  ._punchcard()
+
+$:s("gm_contrabass:3 gm_pad_halo gm_contrabass:2 ")
+  .gain(0.4)
+.legato(1.8)
+.room(0,8)
+
+
+$:n("4 5 <1 2 3>")
+.s("slapstick")
+.gain(2)
+.cut(9)
