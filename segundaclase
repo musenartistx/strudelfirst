@@ -1,0 +1,13 @@
+$:stack(
+s("blr").n(5).gain(0,8),
+  s("bassdrum1*8").note("b2"),
+  s("xr10_bd*8").gain(0.5),
+  s("bossdr550_hh*4").delay(6),
+  s("blr").n(6).gain(0.9)
+  )
+.sometimes(fast(4))
+.every(2,rev)
+.sometimesBy(0.8, rev)
+.delay(5)
+.almostAlways(jux())
+.sometimes(x=>x.note("e1"))
